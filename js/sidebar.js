@@ -1,0 +1,11 @@
+/* Define a largura da sidebar e a margem para 250px*/
+function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+    document.getElementById("main").style.marginRight = "250px";
+  }
+  
+  /* Define a largura da sidebar e a margem para 0*/
+  function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("main").style.marginRight = "0";
+  }

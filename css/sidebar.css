@@ -1,0 +1,61 @@
+/* Sidebar */
+.sidebar {
+  height: 100%; 
+  width: 0; /* Será inserido com o JavaScript */
+  position: fixed; 
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #0C1C28;
+  overflow-x: hidden;
+  padding-top: 60px; 
+  transition: 0.5s; /* Efeito de transição */
+}
+  
+/* Elementos da sidebar */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #fff;
+  display: block;
+  transition: 0.3s;
+}
+  
+.sidebar a:hover {
+  color: #444;
+}
+  
+/* Botão de fechamento da sidebar */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  font-size: 36px;
+}
+  
+/* Botão de abertura da sidebar */
+.openbtn {
+  font-size: 25px;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  border: none;
+  float: right;
+  margin-right: 60px;
+}
+  
+.openbtn:hover {
+  background-color: #444;
+}
+  
+/* Efeito de transição da sidebar */
+#main {
+  transition: margin-right .5s;
+  padding: 20px;
+}
+  
+/* Responsividade para telas menores */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}

@@ -1,0 +1,285 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color:#0C1C28;
+    font-family: Comic Neue, sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 70px;
+    background-color: rgba(12, 28, 40, 0.68);
+    margin: 0;
+    padding: 0;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+::placeholder{
+    color: #fff;
+}
+
+/*Classe geral para centralizar*/
+.centerContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/*Primeira parte de conteúdo*/
+#cont1{
+    position: relative;
+    width: 100%;
+    height: 769px;
+    flex-direction: column;
+}
+
+#cont1::before{
+    content: "";
+    position: absolute;
+    inset: 0; /* Tira as margens */
+    background-image: url(../images/background.png);
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+    opacity: 0.25;
+}
+
+#title{
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 73.6px;
+    
+}
+
+#subtitle{
+    color: #fff;
+    text-align: center;
+    height: 41px;
+    font-weight: 300;
+    size: 36px;
+    line-height: 41.4px;
+}
+
+#button1{
+    font-size: 30px;
+    font-weight: 700;
+    width: 291px;
+    height: 60px;
+    bottom: 80px;
+    position: absolute;
+}
+
+#arrow{
+    position: absolute;
+    bottom: 20px;
+    font-size: 45px;
+    line-height: 35px;
+}
+
+/*Segunda parte de countéudo*/
+#cont2{
+    margin-top: 100px;
+    color: #fff;
+    flex-wrap: wrap; /* Passa para a próxima linha quando necessário*/
+}
+
+#cont2 h2{
+    font-size: 24px;
+}
+
+/*Descrição abaixo do icone*/
+.desc{
+    width: 250px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.icon-item{
+    display: inline-block;
+    text-align: center;
+    margin: 0 35px 20px 0;
+}
+
+.icon-item img{
+    width: 55px;
+}
+
+/*Terceira parte de conteúdo*/
+.textImgs h2{
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.textImgs{
+    color: #fff;
+    max-width: 750px;
+    text-align: center;
+    margin: 100px auto 0 auto;
+    text-wrap: wrap;
+}
+
+#imgs{
+    color: #fff;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+#imgs p{
+    font-size: 12px;
+    padding-left: 11px;
+    text-align: left;
+}
+
+#imgs img{
+    width: 270px;
+    height: 271px;
+    padding: 0 10px 0 10px;
+    margin: 0 auto 0 auto;
+    object-fit: cover; /* Corta a imagem ao invés de deixar esticada */
+}
+
+/*Quarta parte de conteúdo*/
+#feedback{
+    color: #000;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.feedbackText{
+    color: #fff;
+    max-width: 750px;
+    text-align: center;
+    margin: 100px auto 0 auto;
+    text-wrap: wrap;
+}
+
+.feedbackText h2{
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.feedbackText p{
+    font-size: 17px;
+}
+
+.feedbackItem{
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 25px 20px 0 20px;
+    width: 370px;
+    height: 400px;
+    margin: 0 20px 20px 25px;
+}
+
+#feedback img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover; 
+}
+
+.feedbackDesc{
+    height: 180px;
+}
+
+.feedbackName{
+    font-weight: 700;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/*Campo de mensagem*/
+#msgBox{
+    position: relative;
+    width: 100%;
+    height: 769px;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    margin-top: 150px;
+}
+
+#msgBox::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(../images/background2.jpeg);
+    background-size: cover;
+    background-position: center center;
+    z-index: -1; /* Coloca o elemento na posição abaixo */
+    opacity: 0.25;
+}
+
+#msgBox h2{
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 90px;
+}
+
+.box{
+    background-color: #0C1C28;
+    width: 65%;
+    max-width: 860px;
+    min-width: 420px;
+    padding: 40px 50px 55px 50px;
+    margin-top: 10px;
+    transform: translate(-50%, -50%); /* Centralização */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+/*Linhas*/
+.row{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /*Estrutura de repetição para as colunas*/
+    grid-gap: 0 10px; /* Espaço entre os input/textarea */
+}
+
+/*Colunas*/
+.column{
+    margin: 0 5px 10px 0;
+    padding: 0;
+}
+
+/*Input e textarea do campo de mensagem*/
+.column input, textarea{
+    color: #fff;
+    width: 100%;
+    font-weight: 400;
+    padding: 10px;
+    margin: 5px -10px 0 0;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    background-color: transparent;
+}
+
+.column textarea{
+    resize: none;
+}
+
+.box button{
+    width: 300px;
+    height: 60px;
+    font-weight: 700;
+    font-size: 23px;
+}
+
+footer{
+    color: #fff;
+    text-align: center;
+    margin: 20px 0 20px 0;
+    font-size: 20px;
+}
